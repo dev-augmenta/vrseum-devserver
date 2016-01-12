@@ -1,6 +1,21 @@
 {
-  "db": {
-    "name": "db",
-    "connector": "memory"
-  }
+	"db": {
+		"name": "db",
+		"connector": "memory",
+		"file": "data/db.json"
+	},
+	"mongolab": {
+		"host": "ds043615.mongolab.com",
+		"port": 43615,
+		"database": "heroku_4201mq4b",
+		"username": "vrseum_devserver",
+		"password": "PieroAugmenta15",
+		"name": "mongolab",
+		"server": {
+			"auto_reconnect": true,
+			"reconnectTries": 100,
+			"reconnectInterval": 1000
+		},
+		"connector": "mongodb"
+	}
 }
