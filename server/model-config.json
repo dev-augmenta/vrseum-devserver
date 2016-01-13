@@ -41,5 +41,9 @@
   "Role": {
     "dataSource": "mongolab",
     "public": false
+  },
+  "Museum": {
+    "dataSource": "mongolab",
+    "public": true
   }
 }

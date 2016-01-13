@@ -1,4 +1,4 @@
-var async = require('async');
+/*var async = require('async');
 module.exports = function(app, cb)
 {
 	//data sources
@@ -8,6 +8,7 @@ module.exports = function(app, cb)
 	//data vars
 	var users = [];
 	var roles = [];
+	var museums = [];
 
 	// create users
 	mongolab.automigrate('AppUser', function(err) {
@@ -24,7 +25,7 @@ module.exports = function(app, cb)
 						users[0] = user; //store it do data vars
 						console.log('Created users: ', user);
 
-						/*dbMemory.automigrate('Museum', function(err){
+						mongolab.automigrate('Museum', function(err){
 						if(err) return cb(err);
 
 						users[0].museums.create({
@@ -35,7 +36,7 @@ module.exports = function(app, cb)
 							museums[0] = museum;
 							console.log('Created museum:', museum);
 						});
-						});*/
+						});
 					});
 			}
 		});
@@ -69,6 +70,6 @@ module.exports = function(app, cb)
 		}
 		});
 	});
-};
+};*/
 
 
