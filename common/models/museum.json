@@ -30,28 +30,30 @@
       "foreignKey": "ownerId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
-	},
-	{
+    },
+    {
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW",
       "property": "create"
     },
-	{
+    {
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "updateById"
     },
-	{
+    {
       "principalType": "ROLE",
       "principalId": "$owner",
       "permission": "ALLOW",
       "property": "deleteById"
-    }],
+    }
+  ],
   "methods": {}
 }

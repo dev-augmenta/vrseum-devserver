@@ -6,31 +6,36 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+	  "folder" : {
+		  "type" :  "String"
+	  }
+  },
   "validations": [],
   "relations": {
-	 "museums": {
+    "museums": {
       "type": "hasMany",
       "model": "Museum",
       "foreignKey": "ownerId"
     },
-	 "accessTokens": {
+    "accessTokens": {
       "type": "hasMany",
       "model": "accessToken",
       "foreignKey": "userId"
     },
-	"identities": {
+    "identities": {
       "type": "hasMany",
       "model": "userIdentity",
       "foreignKey": "userId"
     },
-	"credentials": {
+    "credentials": {
       "type": "hasMany",
       "model": "userCredential",
       "foreignKey": "userId"
     }
   },
-  "acls": [{
+  "acls": [
+    {
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
@@ -41,17 +46,23 @@
       "permission": "ALLOW",
       "property": "create"
     },
-	{
+    {
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW",
       "property": "find"
     },
-	{
+    {
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW",
       "property": "findById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "deleteById"
     },
     {
       "principalType": "ROLE",
@@ -71,6 +82,12 @@
       "permission": "ALLOW",
       "property": "logout"
     },
+	{
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "updateAttributes"
+    },
     {
       "principalType": "ROLE",
       "principalId": "$owner",
@@ -84,17 +101,24 @@
       "property": "confirm"
     },
     {
+      "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "ALLOW",
-      "property": "resetPassword",
-      "accessType": "EXECUTE"
+      "property": "resetPassword"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "__get__museums"
     },
 	{
-	 "principalType" : "ROLE",
-	 "principalId" : "$authenticated",
-	 "permission" : "ALLOW",
-	 "property" : "__get__museums"
-	}],
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "files"
+    }
+  ],
   "methods": {}
 }

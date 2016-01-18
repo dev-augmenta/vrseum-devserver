@@ -19,10 +19,10 @@
     "connector": "mongodb"
   },
   "storage": {
-    "name": "vrseum",
+    "name": "storage",
     "connector": "loopback-component-storage",
     "provider": "amazon",
-	"region" : "eu-central-1",
+    "region": "eu-central-1",
     "key": "bjijxfFMR2ue7KlgsgVveUAyc2YaBnhmuW4+rQSG",
     "keyId": "AKIAJWIFE6NBOUEKJRZQ"
   }
