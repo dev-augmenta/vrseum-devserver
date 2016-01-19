@@ -10,7 +10,7 @@ module.exports = function(AppUser) {
 			container.getFiles(instance.folder, null, function(error, data){
 				var response = data;
 				cb(null, response);
-			});		
+			});
 		});
 	};
 
@@ -18,8 +18,8 @@ module.exports = function(AppUser) {
 		'files',
 		{
 			description : 'Queries files of AppUser',
+			accepts :[ { arg: 'id', description: 'Model id', type: 'string', required : true}],
 			http : { path : '/:id/files', verb : 'get'},
-			accepts : { arg: 'id', description: 'Model id', type: 'string', required : true, http : { source : 'query'} },
 			returns : { arg: 'data', type : 'string'}
 		}
 	);

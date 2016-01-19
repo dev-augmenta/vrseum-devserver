@@ -118,6 +118,12 @@
       "principalId": "admin",
       "permission": "ALLOW",
       "property": "files"
+    },
+	{
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW",
+      "property": "files"
     }
   ],
   "methods": {}
